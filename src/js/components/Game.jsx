@@ -1,5 +1,6 @@
 import PlayersChoose from "./choice";
 import React, { useState } from "react";
+import GameBoard from "./GameBoard";
 
 
 // tictactoe game page
@@ -12,9 +13,10 @@ function TGameStart() {
     setGameStarted(true);
   };
 
+  
   return (
-    <div>
-    
+  
+      <div>
       {!gameStarted ? (
         <PlayersChoose onStart={handleStart} />
       ) : (
@@ -23,6 +25,9 @@ function TGameStart() {
           <p>
             Player 1 ({players.player1}) vs Player 2 ({players.player2})
           </p>
+
+       <GameBoard />
+
           {/* Here you would load the Tic Tac Toe board - https://react.dev/learn/tutorial-tic-tac-toe */}
         </div>
       )}

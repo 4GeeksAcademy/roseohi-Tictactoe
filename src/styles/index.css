@@ -9,3 +9,72 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    font-size: 20px;
+    color: red;
+
+    margin-top: 10%;
+}
+
+.c-btns{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    /* height: 100px; */
+    /* width: 150px; */
+
+    margin-bottom: 30px;
+}
+
+
+
+
+.win-label{
+    font-size: 50px;
+     font-weight: bold;
+    color: blue;
+}
+
+
+/* Grid squres styles */
+.container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between rows */
+}
+
+.board-row {
+  display: flex;
+  gap: 20px; /* space between squares in a columns*/
+}
+
+.square {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px; /* slightly rounded edges */
+  background-color: #d6fff4; /*box colors*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  box-shadow: 0 2px 5px rgba(190, 7, 163, 0.79);
+ 
+}
+
+.square:hover {
+  background-color: #e0e0e0;
+}
+
+.names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    width: 50%;
+    margin-bottom: 5%;
+}

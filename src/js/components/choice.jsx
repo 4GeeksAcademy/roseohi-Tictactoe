@@ -22,25 +22,41 @@ function PlayersChoose({ onStart }) {
     }
   };
 
-  return (
+
+  // buttons and Initial user input
+ return (
+
     <div className="flex flex-col items-center justify-center">
 
-      <h1 className="font-bold mb-6">Make your Choice!: X or O</h1>
-      
-      <div className="flex gap-6">
+
+      <h1 className="font-bold mb-5">Make your Choice!: X or O</h1>
+
+{/* Name inputs */}
+  <div class="names form-group container row">
+      <label for="username col-md-5">Player 1:</label>
+        <input type="text" class="form-control" name="Player 1" placeholder="Enter name"/>
+
+         <label for="username col-md-5">Player 2:</label>
+        <input type="text" class="form-control" name="Player 2" placeholder="Enter name"/>
+</div>
+
+
+      <div className="c-btns container-md">
+        {/* X button */}
         <button
-          className={`px-6 py-3 text-xl rounded-lg ${
-            firstChoice === "X" ? "bg-blue-500 text-white" : "bg-gray-300"
+          className={` ${
+            firstChoice === "X" ? "text-white" : "bg-gray-300"
           }`}
           onClick={() => handleChoice("X")}
         >
           X
         </button>
+        {/* </div> */}
 
       {/* O button */}
         <button
-          className={`px-6 py-3 text-xl rounded-lg ${
-            firstChoice === "O" ? "bg-blue-500 text-white" : "bg-gray-300"
+          className={` ${
+            firstChoice === "O" ? "text-white" : "bg-gray-300"
           }`}
           onClick={() => handleChoice("O")}
         >
@@ -55,21 +71,18 @@ function PlayersChoose({ onStart }) {
         </p>
       )}
 
-      <button
+
+      <button 
         disabled={!firstChoice}
-        className={`mt-8 px-6 py-3 text-xl rounded-lg ${
+        className={`mt-8 px-6 py-3 text-xl text-dark rounded-lg bg-info ${
           firstChoice ? "bg-green-500 text-white" : "bg-gray-400"
         }`}
         onClick={handleStart}>Start Game</button>
-
+</div>
       
-    </div>
+
   );
 } export default PlayersChoose;
 
 
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Next work on tictoe boared interactive game
-// Then name inputs 
-// do styling w/ css and boost strap
