@@ -28,7 +28,6 @@ function TGameStart() {
 
        <GameBoard />
 
-          {/* Here you would load the Tic Tac Toe board - https://react.dev/learn/tutorial-tic-tac-toe */}
         </div>
       )}
     </div>
